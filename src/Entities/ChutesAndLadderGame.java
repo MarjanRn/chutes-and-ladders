@@ -3,7 +3,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
+
 
 public class ChutesAndLadderGame implements Game{
     private Board board;
@@ -14,6 +16,7 @@ public class ChutesAndLadderGame implements Game{
     public static final String LADDER = "LADDER";
     public static final String CHUTE = "CHUTE";
 
+    private static Logger logger = Logger.getLogger(ChutesAndLadderGame.class.getName());
 
     public ChutesAndLadderGame(String[] nameOfPlayers,
                                HashMap<Integer, Integer> ladderMap,
@@ -22,6 +25,7 @@ public class ChutesAndLadderGame implements Game{
         initBoard(ladderMap, chuteMap);
         initPlayers(nameOfPlayers);
         initSpinner(spinnerDimension);
+
     }
 
     private void initSpinner(int spinnerDimension) {
@@ -29,6 +33,11 @@ public class ChutesAndLadderGame implements Game{
     }
 
     private void initPlayers(String[] nameOfPlayers) {
+        if (nameOfPlayers.length > 4 || nameOfPlayers.length < 2) {
+            logger.info("Number of players must be between 2 to 4 but found " + nameOfPlayers.length);
+            throw new IllegalArgumentException("Unable to create a list of players!");
+        }
+
         for(String name : nameOfPlayers){
             Player player = new Player(name);
             this.players.add(player);
