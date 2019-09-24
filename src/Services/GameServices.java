@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /*
-    methods in here can be used for reading different parameters from input
+    methods in here can be used for reading console inputs
 */
 public class GameServices {
 
@@ -24,14 +24,15 @@ public class GameServices {
     public static int getNumberOfPlayers() {
         System.out.println("Please enter number of players (minimum 2 players)...");
         Scanner sc = new Scanner(System.in);
-        int no = sc.nextInt();
-        return no > 1 ? no : getNumberOfPlayers();
+        int noOfPlayers = sc.nextInt();
+        return noOfPlayers > 1 && noOfPlayers <= 4 ? noOfPlayers : getNumberOfPlayers();
     }
 
     public static int getSpinnetDimentions(){
         System.out.println("Please enter the dimension of the spinner...");
         Scanner sc = new Scanner(System.in);
-        return sc.nextInt();
+        int noOfDimensions = sc.nextInt();
+        return noOfDimensions > 0 && noOfDimensions <= 6 ? noOfDimensions : getSpinnetDimentions();
     }
 
 }

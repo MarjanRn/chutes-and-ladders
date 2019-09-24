@@ -1,5 +1,13 @@
-# chutes-and-ladders
-This code is an implementation of Ladders and Chute Game.
-_there can be 2 to 4 players.
-_the spinner dimensions could be between 1 to 6.
+# Chute and Ladders Game
+This code is an implementation of the classic "Ladders and Chute" Game. It simulates 2-4 players and generates proper outputs.
+
+* there can be 2 to 4 players.
+* the spinner dimensions could be between 1 to 6.
+
+## Getting started
+You simply can run the game with default values by running the main class.
+
+### Note
+There is also a GameServices class defined that can be used for reading parameters from input console
+
 
