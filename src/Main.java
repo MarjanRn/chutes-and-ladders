@@ -2,9 +2,7 @@ import Entities.ChutesAndLadderGame;
 
 import java.util.HashMap;
 
-
 class Main {
-
 
     public static void main(String[] args) {
         initGame();
@@ -15,7 +13,7 @@ class Main {
         HashMap<Integer, Integer> laddersMap = new HashMap<>();
         HashMap<Integer, Integer> chutesMap = new HashMap<>();
 
-        // you can change all these values manually here, or use the services package for reading those through the input
+        // you can change all these values manually here, or use the services package for reading those through the input console
         initLadderMap(laddersMap);
         initChutesMap(chutesMap);
 
@@ -25,7 +23,6 @@ class Main {
         ChutesAndLadderGame chutesAndLadderGame = new ChutesAndLadderGame(nameOfPlayers, laddersMap, chutesMap, noOfSpinnerDimensions);
 
         chutesAndLadderGame.play();
-
     }
 
 

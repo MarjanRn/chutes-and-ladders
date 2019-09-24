@@ -62,6 +62,7 @@ public class ChutesAndLadderGame implements Game{
 
                 handleJumping(player, laddersMap, LADDER);
                 handleJumping(player, chutesMap, CHUTE);
+
                 if(winnerFound(player)){
                     endGame(player);
                     keepPlaying = false;
@@ -69,6 +70,16 @@ public class ChutesAndLadderGame implements Game{
                 }
             }
         }
+    }
+
+    @Override
+    public void restartGame() {
+
+    }
+
+    @Override
+    public void finishTheGame() {
+
     }
 
     private static void endGame(Player player) {

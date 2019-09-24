@@ -9,7 +9,7 @@ import java.util.Map;
 public class Board {
 
     /*
-    Ladders and Chutes also could be defined a s two simple Maps instead of defining separate classes:
+    Ladders and Chutes also could be defined as two simple Maps instead of defining separate classes:
     private Map<Integer, Integer> ladders = new HashMap<>();
     private Map<Integer, Integer> chutes = new HashMap<>();
 

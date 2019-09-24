@@ -5,9 +5,10 @@ This code is an implementation of the classic "Ladders and Chute" Game. It simul
 * the spinner dimensions could be between 1 to 6.
 
 ## Getting started
-You simply can run the game with default values by running the main class.
+* You simply can run the game with default values by running the main class. 
+* This assignment also could be delivered as an independent library or an executable jar instead(but I'm delivering that as per requested in the requirements).
 
 ### Note
-There is also a GameServices class defined that can be used for reading parameters from input console
+There is also a GameServices class defined that can be used for reading parameters from input console.
 
 

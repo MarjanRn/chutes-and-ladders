@@ -35,4 +35,6 @@ public class GameServices {
         return noOfDimensions > 0 && noOfDimensions <= 6 ? noOfDimensions : getSpinnetDimentions();
     }
 
+    //TODO get the ladders and chutes locations in the board from the input console
+
 }

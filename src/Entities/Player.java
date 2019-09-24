@@ -6,7 +6,7 @@ public class Player {
 
     Player(String name){
         this.name = name;
-        this.position = 0;
+        this.position = 0; // place all the players at square 0
     }
 
     public int rollSpinner(){
