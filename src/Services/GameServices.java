@@ -31,6 +31,10 @@ public class GameServices {
         try {
             // this will throw a StackOverFlow exception in case of trying to set noOfPlayers to the unacceptable range
             // (either throw the input, or calling getNumberOfPlayers() with a parameter passing a logically wrong value)
+            // or
+            // instead of letting the stackoverflow happen and then handle it, I could limit the number of calls to
+            // this method and at the end of number of calls, just set a default value to the noOfPlayers and notify the
+            // user about it.
             noOfPlayers = noOfPlayers > 1 && noOfPlayers <= 4 ? noOfPlayers : getNumberOfPlayers();
         } catch (StackOverflowError e) {
             logger.info("Caught" + e);
