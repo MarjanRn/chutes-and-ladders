@@ -20,7 +20,7 @@ public class Player {
             this.position += newPos;
             System.out.print(this.position);
         } else {
-            System.out.print("You need to roll the spinner again in the round!");
+            System.out.print("Oops! You'll need to roll the spinner again in the next round!");
         }
     }
 
