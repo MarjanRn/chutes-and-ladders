@@ -30,12 +30,12 @@ public class GameServices {
         int noOfPlayers = sc.nextInt();
         try {
             // this will throw a StackOverFlow exception in case of trying to set noOfPlayers to the unacceptable range
-            // (either throw the input, or calling getNumberOfPlayers() with a parameter passing a logically wrong value)
-            // or
+            // many times (either throw the input, or calling getNumberOfPlayers() with a parameter passing a logically
+            // wrong value)
             // instead of letting the stackoverflow happen and then handle it, I could limit the number of calls to
             // this method and at the end of number of calls, just set a default value to the noOfPlayers and notify the
             // user about it.
-            noOfPlayers = noOfPlayers > 1 && noOfPlayers <= 4 ? noOfPlayers : getNumberOfPlayers();
+            noOfPlayers = checkNumberOfPlayers(noOfPlayers) ? noOfPlayers : getNumberOfPlayers();
         } catch (StackOverflowError e) {
             logger.info("Caught" + e);
             e.printStackTrace();
@@ -44,17 +44,8 @@ public class GameServices {
     }
 
 
-    public static int getNumberOfPlayers(int noOfPlayers) {
-
-        try {
-            // this will throw a StackOverFlow exception in case of trying to set noOfPlayers to the unacceptable range
-            // (either throw the input, or calling getNumberOfPlayers() with a parameter passing a logically wrong value)
-            noOfPlayers = noOfPlayers > 1 && noOfPlayers <= 4 ? noOfPlayers : getNumberOfPlayers(noOfPlayers);
-        } catch (StackOverflowError e) {
-            logger.info("Caught" + e);
-            e.printStackTrace();
-        }
-        return noOfPlayers;
+    public static boolean checkNumberOfPlayers(int noOfPlayers) {
+            return noOfPlayers > 1 && noOfPlayers <= 4;
     }
 
 
