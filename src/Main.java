@@ -5,10 +5,11 @@ import java.util.HashMap;
 class Main {
 
     public static void main(String[] args) {
-        initGame();
+        ChutesAndLadderGame chutesAndLadderGame = initGame();
+        chutesAndLadderGame.play();
     }
 
-    private static void initGame () {
+    private static ChutesAndLadderGame initGame () {
 
         HashMap<Integer, Integer> laddersMap = new HashMap<>();
         HashMap<Integer, Integer> chutesMap = new HashMap<>();
@@ -22,7 +23,7 @@ class Main {
 
         ChutesAndLadderGame chutesAndLadderGame = new ChutesAndLadderGame(nameOfPlayers, laddersMap, chutesMap, noOfSpinnerDimensions);
 
-        chutesAndLadderGame.play();
+        return chutesAndLadderGame;
     }
 
 
