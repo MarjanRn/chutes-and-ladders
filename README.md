@@ -1,5 +1,5 @@
-# Chute and Ladders Game
-This code is an implementation of the classic "Ladders and Chute" Game. It simulates 2-4 players and generates proper outputs.
+# Chutes and Ladders Game
+This code is an implementation of the classic "Ladders and Chutes" Game. It simulates 2-4 players and generates proper outputs.
 
 * there can be 2 to 4 players.
 * the spinner dimensions could be between 1 to 6.
